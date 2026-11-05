@@ -1,0 +1,3035 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fayaz Ahmed — Full Stack PHP &amp; Laravel Developer | Hyderabad, Pakistan</title>
+    <meta name="description" content="Fayaz Ahmed is a self-taught Full Stack PHP & Laravel Developer from Hyderabad, Pakistan, specializing in Laravel, MySQL, management systems, and e-commerce platforms.">
+    <meta name="keywords" content="Fayaz Ahmed, Laravel Developer, PHP Developer, Full Stack Developer, Web Developer, Hyderabad Pakistan, MySQL, Bootstrap, AJAX, REST API">
+    <meta name="author" content="Fayaz Ahmed">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fayaz Ahmed — Full Stack PHP & Laravel Developer">
+    <meta property="og:description" content="Self-taught Full Stack Web Developer specializing in PHP, Laravel, MySQL, and modern frontend technologies.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233b82f6'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='13' fill='white'>FA</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+/* ============================================================
+   FAYAZ AHMED — PORTFOLIO STYLESHEET
+   Full Stack PHP & Laravel Developer
+   ============================================================ */
+
+/* ===== CSS VARIABLES — DARK THEME (DEFAULT) ===== */
+:root {
+    --bg-primary:     #060c18;
+    --bg-secondary:   #0b1427;
+    --bg-card:        #101e36;
+    --bg-card-hover:  #152445;
+    --border:         #1a3358;
+    --border-light:   #233d6b;
+
+    --accent:         #3b82f6;
+    --accent-hover:   #60a5fa;
+    --accent-dim:     rgba(59, 130, 246, 0.10);
+    --accent-glow:    rgba(59, 130, 246, 0.22);
+
+    --text-primary:   #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted:     #4f6888;
+
+    --nav-bg:         rgba(6, 12, 24, 0.94);
+    --shadow-card:    0 4px 32px rgba(0, 0, 0, 0.45);
+    --shadow-hover:   0 10px 48px rgba(0, 0, 0, 0.55);
+
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body:    'Inter', sans-serif;
+
+    --section-py:   100px;
+    --radius-sm:    6px;
+    --radius:       12px;
+    --radius-lg:    20px;
+    --transition:   0.22s ease;
+    --transition-s: 0.4s ease;
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+    --bg-primary:     #f8fafc;
+    --bg-secondary:   #f1f5f9;
+    --bg-card:        #ffffff;
+    --bg-card-hover:  #f8fafc;
+    --border:         #e2e8f0;
+    --border-light:   #cbd5e1;
+
+    --accent:         #2563eb;
+    --accent-hover:   #1d4ed8;
+    --accent-dim:     rgba(37, 99, 235, 0.08);
+    --accent-glow:    rgba(37, 99, 235, 0.18);
+
+    --text-primary:   #0f172a;
+    --text-secondary: #475569;
+    --text-muted:     #94a3b8;
+
+    --nav-bg:         rgba(248, 250, 252, 0.95);
+    --shadow-card:    0 4px 24px rgba(0, 0, 0, 0.07);
+    --shadow-hover:   0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 78px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 15px;
+    overflow-x: hidden;
+    transition: background-color var(--transition-s), color var(--transition-s);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* ===== SHARED SECTION STYLES ===== */
+.section-padding {
+    padding: var(--section-py) 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-secondary);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* ===== SCROLL REVEAL ===== */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== NAVBAR ===== */
+#mainNav {
+    background: var(--nav-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+    padding: 13px 0;
+    transition: background var(--transition-s), box-shadow var(--transition);
+    z-index: 1050;
+}
+
+#mainNav.scrolled {
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-primary) !important;
+}
+
+.logo-initials {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--accent), #2563eb);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    letter-spacing: 0;
+}
+
+.logo-sm {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+}
+
+.logo-text {
+    font-size: 0.98rem;
+}
+
+/* Nav links */
+.navbar .nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 6px 12px !important;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition), background var(--transition);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent) !important;
+    background: var(--accent-dim);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0;
+    transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+}
+
+/* Hamburger */
+.navbar-toggler {
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 8px 10px !important;
+    background: transparent !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.hamburger-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text-secondary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* ===== HERO ===== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 78px;
+}
+
+/* Grid background */
+.hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.hero-bg-grid::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 55%, transparent 25%, var(--bg-primary) 70%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    color: var(--accent-hover);
+    padding: 6px 15px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Heading */
+.hero-heading {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.name-highlight {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Typing */
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+    font-weight: 500;
+    color: var(--text-secondary);
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.typing-wrapper {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-hover);
+    font-weight: 600;
+}
+
+.typing-cursor {
+    display: inline-block;
+    margin-left: 1px;
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.hero-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 480px;
+    line-height: 1.8;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent), #2563eb);
+    color: #fff !important;
+    border: none;
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px var(--accent-glow);
+    color: #fff !important;
+}
+
+.btn-outline-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-light);
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    transition: all var(--transition);
+}
+
+.btn-outline-custom:hover {
+    border-color: var(--accent);
+    color: var(--accent) !important;
+    background: var(--accent-dim);
+    transform: translateY(-2px);
+}
+
+/* Social links */
+.hero-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    transition: all var(--transition);
+}
+
+.social-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: translateY(-3px);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    animation: bounce-down 2s ease-in-out infinite;
+}
+
+.scroll-indicator a { color: inherit; }
+
+@keyframes bounce-down {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== CODE WINDOW ===== */
+.code-visual {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    z-index: 1;
+}
+
+.code-window {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(59, 130, 246, 0.08);
+}
+
+.window-bar {
+    background: #161b22;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-bottom: 1px solid #21262d;
+}
+
+.window-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.window-filename {
+    margin-left: 8px;
+    font-size: 0.74rem;
+    color: #8b949e;
+    font-family: 'Courier New', monospace;
+}
+
+.code-content {
+    padding: 20px 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.85;
+}
+
+.code-line { white-space: pre; }
+
+/* Syntax colors */
+.kw   { color: #ff7b72; }
+.ns   { color: #d2a8ff; }
+.cls  { color: #79c0ff; }
+.prop { color: #ff7b72; }
+.var  { color: #e6edf3; }
+.str  { color: #a5d6ff; }
+.fnname { color: #d2a8ff; }
+
+/* Floating badges */
+.floating-badge {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.badge-laravel {
+    bottom: -18px;
+    left: -28px;
+    color: #f05340;
+    animation: float 3s ease-in-out infinite;
+}
+
+.badge-php {
+    top: 36px;
+    right: -44px;
+    color: #7b7fb5;
+    animation: float 3s ease-in-out 1s infinite;
+}
+
+.badge-mysql {
+    bottom: 60px;
+    right: -52px;
+    color: #00bcd4;
+    animation: float 3s ease-in-out 2s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-9px); }
+}
+
+/* ===== ABOUT ===== */
+.about-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-card);
+}
+
+.about-avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.avatar-letters {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--accent), #1d4ed8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    opacity: 0.4;
+    animation: ring-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes ring-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50%       { opacity: 0.1; transform: scale(1.09); }
+}
+
+.about-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.about-role-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.stat-item { text-align: center; }
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+.about-availability {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #22c55e;
+    font-weight: 500;
+}
+
+.availability-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    flex-shrink: 0;
+    animation: dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+    50%       { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+}
+
+/* About text */
+.about-para {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.about-para:last-of-type { margin-bottom: 0; }
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.highlight-item:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.highlight-item i {
+    color: var(--accent);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* ===== SKILLS ===== */
+.skill-category-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    height: 100%;
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.skill-category-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+}
+
+.skill-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.skill-cat-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.skill-cat-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.skill-tag-accent {
+    background: var(--accent-dim);
+    border-color: var(--accent-glow);
+    color: var(--accent-hover);
+}
+
+/* ===== PROJECTS ===== */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: var(--font-body);
+}
+
+.filter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 100%;
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-6px);
+}
+
+.featured-project {
+    border-color: var(--accent-glow);
+}
+
+/* Project image area */
+.project-image {
+    position: relative;
+    height: 185px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proj-img-1 { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 60%, #60a5fa 100%); }
+.proj-img-2 { background: linear-gradient(135deg, #064e3b 0%, #059669 60%, #34d399 100%); }
+.proj-img-3 { background: linear-gradient(135deg, #7c2d12 0%, #ea580c 60%, #fb923c 100%); }
+.proj-img-4 { background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 60%, #a78bfa 100%); }
+.proj-img-5 { background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 60%, #38bdf8 100%); }
+.proj-img-6 { background: linear-gradient(135deg, #881337 0%, #be123c 60%, #fb7185 100%); }
+.proj-img-7 { background: linear-gradient(135deg, #78350f 0%, #d97706 60%, #fbbf24 100%); }
+.proj-img-8 { background: linear-gradient(135deg, #14532d 0%, #16a34a 60%, #4ade80 100%); }
+
+.project-visual {
+    position: relative;
+    z-index: 1;
+}
+
+.project-icon {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.28);
+}
+
+/* Featured badge (always visible) */
+.project-featured-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    z-index: 3;
+}
+
+/* Overlay (shows on hover) */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.62);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+    z-index: 2;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links-overlay {
+    display: flex;
+    gap: 10px;
+}
+
+.proj-link-btn {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    backdrop-filter: blur(4px);
+    transition: background var(--transition), border-color var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.proj-link-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Project body */
+.project-body {
+    padding: 24px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.project-tech-badge {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    color: var(--accent-hover);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.live-badge {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+}
+
+.project-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.project-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.72;
+    margin-bottom: 16px;
+}
+
+.project-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+
+.proj-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.proj-stat i {
+    color: var(--accent);
+    font-size: 0.8rem;
+}
+
+/* Filter: hidden state */
+.project-hidden {
+    display: none !important;
+}
+
+/* ===== EXPERIENCE ===== */
+.exp-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.exp-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.exp-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.exp-content { flex: 1; }
+
+.exp-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.exp-period {
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.exp-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.72;
+    margin: 0;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.cert-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-align: center;
+    height: 100%;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.cert-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.cert-featured {
+    border-color: var(--accent-glow);
+    background: linear-gradient(to bottom, var(--bg-card) 60%, var(--accent-dim));
+}
+
+.cert-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin: 0 auto 16px;
+}
+
+.cert-issuer {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.cert-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.cert-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.cert-grade {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* ===== EDUCATION TIMELINE ===== */
+.edu-timeline {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.edu-item {
+    display: grid;
+    grid-template-columns: 100px 24px 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 28px;
+}
+
+.edu-item:last-child { margin-bottom: 0; }
+
+.edu-year {
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    padding-top: 20px;
+    font-family: var(--font-heading);
+    white-space: nowrap;
+}
+
+.edu-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 22px;
+}
+
+.edu-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--bg-secondary);
+    box-shadow: 0 0 0 2px var(--accent);
+    flex-shrink: 0;
+}
+
+.edu-line {
+    width: 2px;
+    height: 56px;
+    background: var(--border);
+    margin-top: 6px;
+}
+
+.edu-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.edu-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-hover);
+}
+
+.edu-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.edu-institution {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ===== LEARNING TIMELINE ===== */
+.learning-timeline {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px 0 48px;
+}
+
+.timeline-track {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--accent), var(--accent-hover));
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.timeline-items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.timeline-dot {
+    width: 52px;
+    height: 52px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: all var(--transition);
+}
+
+.timeline-item:hover .timeline-dot {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.timeline-dot-active {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
+    box-shadow: 0 0 24px var(--accent-glow);
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.timeline-tech {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.timeline-active-tech { color: var(--accent); }
+
+.timeline-date {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* ===== CONTACT ===== */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-info-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.contact-info-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.contact-info-value {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+a.contact-info-value:hover { color: var(--accent); }
+
+.contact-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-social-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    transition: all var(--transition);
+}
+
+.contact-social-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+}
+
+/* Contact form card */
+.contact-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+}
+
+.form-note {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-glow);
+    color: var(--text-secondary);
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    line-height: 1.65;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.form-label-custom {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 7px;
+    display: block;
+}
+
+.form-input-custom {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 11px 14px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+    resize: vertical;
+}
+
+.form-input-custom::placeholder {
+    color: var(--text-muted);
+}
+
+.form-input-custom:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.form-input-custom.input-error {
+    border-color: #f87171;
+}
+
+.field-error {
+    font-size: 0.75rem;
+    color: #f87171;
+    margin-top: 4px;
+    min-height: 16px;
+    display: block;
+}
+
+.form-success-msg {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 40px 0 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand-text strong {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.footer-brand-text small {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    transition: color var(--transition);
+}
+
+.footer-nav a:hover { color: var(--accent); }
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.footer-social {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    transition: color var(--transition), transform var(--transition);
+}
+
+.footer-social:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity var(--transition), transform var(--transition), background var(--transition);
+    box-shadow: 0 4px 18px var(--accent-glow);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+    :root { --section-py: 72px; }
+
+    .navbar-collapse {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-top: 12px;
+        padding: 16px;
+    }
+
+    .hero-section { padding-top: 100px; }
+
+    .floating-badge { display: none; }
+
+    .about-card { max-width: 420px; margin: 0 auto; }
+
+    .edu-item { grid-template-columns: 86px 20px 1fr; gap: 14px; }
+}
+
+@media (max-width: 767.98px) {
+    :root { --section-py: 60px; }
+
+    .hero-buttons { flex-direction: column; gap: 12px; }
+
+    .btn-primary-custom,
+    .btn-outline-custom { width: 100%; }
+
+    .highlights-grid { grid-template-columns: 1fr; }
+
+    .about-stats { gap: 14px; }
+
+    .stat-number { font-size: 1.5rem; }
+
+    .timeline-items { gap: 4px; }
+    .timeline-dot  { width: 44px; height: 44px; font-size: 1rem; }
+    .timeline-tech { font-size: 0.75rem; }
+    .timeline-date { font-size: 0.65rem; }
+
+    .edu-item { grid-template-columns: 1fr; gap: 8px; }
+    .edu-year { text-align: left; padding-top: 0; }
+    .edu-connector { display: none; }
+
+    .footer-brand  { justify-content: center; }
+    .footer-nav    { justify-content: center; }
+    .footer-socials { justify-content: center; }
+
+    .contact-form-card { padding: 24px; }
+
+    .filter-btn { padding: 6px 14px; font-size: 0.78rem; }
+
+    .project-filters { gap: 6px; }
+
+    .back-to-top { bottom: 18px; right: 18px; }
+}
+
+@media (max-width: 479.98px) {
+    .section-title  { font-size: 1.5rem; }
+    .hero-heading   { font-size: 2.2rem; }
+    .hero-socials   { gap: 8px; }
+    .social-link    { width: 38px; height: 38px; }
+    .timeline-track { left: 30px; right: 30px; }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+    }
+
+    html { scroll-behavior: auto; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ================================================================
+     NAVBAR
+================================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <a class="navbar-brand logo" href="#hero" aria-label="Fayaz Ahmed — Home">
+            <span class="logo-initials" aria-hidden="true">FA</span>
+            <span class="logo-text">Fayaz Ahmed</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last">
+            <button class="btn theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+                <i class="bi bi-moon-stars-fill" id="themeIcon" aria-hidden="true"></i>
+            </button>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto gap-1" role="list">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================================================================
+     HERO
+================================================================ -->
+<section class="hero-section" id="hero" aria-label="Introduction">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+
+            <!-- Left: Text Content -->
+            <div class="col-lg-6 hero-content" data-reveal>
+                <div class="hero-badge mb-4">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    Hyderabad, Pakistan
+                </div>
+
+                <h1 class="hero-heading">
+                    Hi, I'm<br>
+                    <span class="name-highlight">Fayaz Ahmed</span>
+                </h1>
+
+                <div class="hero-title mb-4" aria-live="polite">
+                    <span class="static-title" aria-hidden="true">Full Stack </span>
+                    <span class="typing-wrapper">
+                        <span class="typing-text" id="typingText"></span><span class="typing-cursor" aria-hidden="true">|</span>
+                    </span>
+                </div>
+
+                <p class="hero-desc mb-5">
+                    I build modern, scalable, and database-driven web applications using
+                    PHP, Laravel, MySQL, and modern frontend technologies.
+                </p>
+
+                <div class="hero-buttons mb-5">
+                    <a href="#projects" class="btn btn-primary-custom">
+                        <i class="bi bi-grid-3x3-gap-fill me-2" aria-hidden="true"></i>View My Projects
+                    </a>
+                    <a href="assets/documents/Fayaz-Ahmed-CV.pdf" class="btn btn-outline-custom" download aria-label="Download Fayaz Ahmed CV PDF">
+                        <i class="bi bi-download me-2" aria-hidden="true"></i>Download CV
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Fayaz Ahmed on GitHub">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Fayaz Ahmed on Fiverr">
+                        <i class="bi bi-briefcase-fill" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Fayaz Ahmed on Upwork">
+                        <i class="bi bi-person-workspace" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Fayaz Ahmed on Freelancer">
+                        <i class="bi bi-laptop-fill" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Code Visual -->
+            <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center" aria-hidden="true">
+                <div class="code-visual">
+                    <div class="code-window">
+                        <div class="window-bar">
+                            <span class="window-dot dot-red"></span>
+                            <span class="window-dot dot-yellow"></span>
+                            <span class="window-dot dot-green"></span>
+                            <span class="window-filename">FayazAhmed.php</span>
+                        </div>
+                        <div class="code-content">
+<div class="code-line"><span class="kw">&lt;?php</span></div>
+<div class="code-line"></div>
+<div class="code-line"><span class="kw">namespace</span> <span class="ns">App\Developers</span>;</div>
+<div class="code-line"></div>
+<div class="code-line"><span class="kw">class</span> <span class="cls">FayazAhmed</span> <span class="kw">extends</span> <span class="cls">Developer</span></div>
+<div class="code-line">{</div>
+<div class="code-line">    <span class="prop">public</span> <span class="kw">string</span> <span class="var">$name</span> = <span class="str">'Fayaz Ahmed'</span>;</div>
+<div class="code-line">    <span class="prop">public</span> <span class="kw">string</span> <span class="var">$role</span> = <span class="str">'Full Stack Developer'</span>;</div>
+<div class="code-line">    <span class="prop">public</span> <span class="kw">string</span> <span class="var">$location</span> = <span class="str">'Hyderabad, PK'</span>;</div>
+<div class="code-line"></div>
+<div class="code-line">    <span class="prop">public function</span> <span class="fnname">skills</span>(): <span class="cls">array</span></div>
+<div class="code-line">    {</div>
+<div class="code-line">        <span class="kw">return</span> [</div>
+<div class="code-line">            <span class="str">'Laravel'</span>, <span class="str">'PHP'</span>,</div>
+<div class="code-line">            <span class="str">'MySQL'</span>,  <span class="str">'Bootstrap'</span>,</div>
+<div class="code-line">            <span class="str">'AJAX'</span>,   <span class="str">'REST API'</span>,</div>
+<div class="code-line">        ];</div>
+<div class="code-line">    }</div>
+<div class="code-line">}</div>
+                        </div>
+                    </div>
+                    <!-- Floating badges -->
+                    <div class="floating-badge badge-laravel">
+                        <i class="bi bi-box-fill"></i> Laravel 12
+                    </div>
+                    <div class="floating-badge badge-php">
+                        <i class="bi bi-filetype-php"></i> PHP 8.2
+                    </div>
+                    <div class="floating-badge badge-mysql">
+                        <i class="bi bi-database-fill"></i> MySQL
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+        <a href="#about"><i class="bi bi-chevron-double-down"></i></a>
+    </div>
+</section>
+
+<!-- ================================================================
+     ABOUT
+================================================================ -->
+<section class="section-padding" id="about" aria-label="About Me">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Who I am and what I do</p>
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <!-- Left: Card -->
+            <div class="col-lg-4" data-reveal>
+                <div class="about-card">
+                    <div class="about-avatar">
+                        <div class="avatar-letters" aria-label="FA initials">FA</div>
+                        <div class="avatar-ring" aria-hidden="true"></div>
+                    </div>
+                    <h3 class="about-name mt-3">Fayaz Ahmed</h3>
+                    <p class="about-role-label">Full Stack PHP &amp; Laravel Developer</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-divider" aria-hidden="true"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Year in Laravel</span>
+                        </div>
+                        <div class="stat-divider" aria-hidden="true"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+
+                    <div class="about-availability">
+                        <span class="availability-dot" aria-hidden="true"></span>
+                        Available for opportunities
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Text -->
+            <div class="col-lg-8" data-reveal>
+                <div class="about-text">
+                    <p class="about-para">
+                        I am a self-taught Full Stack Web Developer specializing in PHP and Laravel.
+                        I have practical experience developing management systems, e-commerce applications,
+                        dashboards, and database-driven web applications.
+                    </p>
+                    <p class="about-para">
+                        I enjoy solving problems, learning new technologies, and building professional
+                        software solutions. My development approach focuses on clean code, database
+                        relationships, responsive interfaces, and efficient application functionality.
+                    </p>
+                    <p class="about-para">
+                        As a deaf developer, I communicate professionally through written text, email,
+                        and chat — a strength that keeps my documentation precise and my
+                        client communication clear.
+                    </p>
+
+                    <div class="highlights-grid mt-4">
+                        <div class="highlight-item">
+                            <i class="bi bi-box-fill" aria-hidden="true"></i>
+                            Laravel Application Development
+                        </div>
+                        <div class="highlight-item">
+                            <i class="bi bi-diagram-3-fill" aria-hidden="true"></i>
+                            REST API Development
+                        </div>
+                        <div class="highlight-item">
+                            <i class="bi bi-database-fill" aria-hidden="true"></i>
+                            Database Management
+                        </div>
+                        <div class="highlight-item">
+                            <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                            AJAX-Based Applications
+                        </div>
+                        <div class="highlight-item">
+                            <i class="bi bi-phone-fill" aria-hidden="true"></i>
+                            Responsive Web Design
+                        </div>
+                        <div class="highlight-item">
+                            <i class="bi bi-git" aria-hidden="true"></i>
+                            Git &amp; GitHub Version Control
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     SKILLS
+================================================================ -->
+<section class="section-padding bg-alt" id="skills" aria-label="Technical Skills">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Technologies I work with professionally</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></div>
+                        <h3 class="skill-cat-title">Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="bi bi-filetype-php" aria-hidden="true"></i> PHP</span>
+                        <span class="skill-tag"><i class="bi bi-filetype-js" aria-hidden="true"></i> JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="bi bi-layers-fill" aria-hidden="true"></i></div>
+                        <h3 class="skill-cat-title">Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-accent"><i class="bi bi-box-fill" aria-hidden="true"></i> Laravel</span>
+                        <span class="skill-tag"><i class="bi bi-filetype-jsx" aria-hidden="true"></i> React</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="bi bi-palette-fill" aria-hidden="true"></i></div>
+                        <h3 class="skill-cat-title">Frontend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="bi bi-filetype-html" aria-hidden="true"></i> HTML5</span>
+                        <span class="skill-tag"><i class="bi bi-filetype-css" aria-hidden="true"></i> CSS3</span>
+                        <span class="skill-tag"><i class="bi bi-bootstrap-fill" aria-hidden="true"></i> Bootstrap 5</span>
+                        <span class="skill-tag"><i class="bi bi-lightning-fill" aria-hidden="true"></i> AJAX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="bi bi-server" aria-hidden="true"></i></div>
+                        <h3 class="skill-cat-title">Backend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="bi bi-filetype-php" aria-hidden="true"></i> PHP</span>
+                        <span class="skill-tag skill-tag-accent"><i class="bi bi-box-fill" aria-hidden="true"></i> Laravel</span>
+                        <span class="skill-tag"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i> REST APIs</span>
+                        <span class="skill-tag"><i class="bi bi-layers-fill" aria-hidden="true"></i> MVC Architecture</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="bi bi-database-fill" aria-hidden="true"></i></div>
+                        <h3 class="skill-cat-title">Database &amp; Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="bi bi-database-fill" aria-hidden="true"></i> MySQL</span>
+                        <span class="skill-tag"><i class="bi bi-git" aria-hidden="true"></i> Git</span>
+                        <span class="skill-tag"><i class="bi bi-github" aria-hidden="true"></i> GitHub</span>
+                        <span class="skill-tag"><i class="bi bi-hdd-fill" aria-hidden="true"></i> Laragon</span>
+                        <span class="skill-tag"><i class="bi bi-hdd-stack-fill" aria-hidden="true"></i> XAMPP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="skill-category-card">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="bi bi-globe2" aria-hidden="true"></i></div>
+                        <h3 class="skill-cat-title">Freelance Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Fiverr</span>
+                        <span class="skill-tag"><i class="bi bi-person-workspace" aria-hidden="true"></i> Upwork</span>
+                        <span class="skill-tag"><i class="bi bi-laptop-fill" aria-hidden="true"></i> Freelancer.com</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     PROJECTS
+================================================================ -->
+<section class="section-padding" id="projects" aria-label="Featured Projects">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Real-world web applications I have built</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters mb-5" data-reveal role="group" aria-label="Filter projects by technology">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="laravel">Laravel</button>
+            <button class="filter-btn" data-filter="ajax">AJAX</button>
+            <button class="filter-btn" data-filter="mysql">MySQL</button>
+            <button class="filter-btn" data-filter="bootstrap">Bootstrap</button>
+            <button class="filter-btn" data-filter="react">React</button>
+        </div>
+
+        <div class="row g-4" id="projectGrid">
+
+            <!-- 1. School Management System -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap ajax chart" data-reveal>
+                <article class="project-card featured-project">
+                    <div class="project-image proj-img-1">
+                        <span class="project-featured-badge">Flagship Project</span>
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="School Management System on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="School Management System live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-mortarboard-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">PHP 8.2</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">AJAX</span>
+                            <span class="project-tech-badge">Chart.js</span>
+                        </div>
+                        <h3 class="project-title">School Management System</h3>
+                        <p class="project-desc">Comprehensive school management platform with 7 user roles, 14 modules, and 43 database tables — covering attendance, timetables, fee management, examinations, analytics, and a public-facing website.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-people-fill" aria-hidden="true"></i> 7 User Roles</div>
+                            <div class="proj-stat"><i class="bi bi-grid-fill" aria-hidden="true"></i> 14 Modules</div>
+                            <div class="proj-stat"><i class="bi bi-table" aria-hidden="true"></i> 43 DB Tables</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 2. Attendance Management System -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap ajax" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-2">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="Attendance Management System on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="Attendance Management System live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-calendar-check-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">AJAX</span>
+                            <span class="project-tech-badge">Bootstrap 5</span>
+                        </div>
+                        <h3 class="project-title">Attendance Management System</h3>
+                        <p class="project-desc">University-level attendance system for the University of Sindh Jamshoro — rebuilt from a legacy VB desktop app, featuring cascading AJAX dropdowns, live search, and print-ready attendance reports.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-people-fill" aria-hidden="true"></i> 3 Roles</div>
+                            <div class="proj-stat"><i class="bi bi-lightning-fill" aria-hidden="true"></i> Cascading AJAX</div>
+                            <div class="proj-stat"><i class="bi bi-printer-fill" aria-hidden="true"></i> Print Reports</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 3. ShopZone -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap ajax chart" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-3">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="ShopZone on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="ShopZone live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-bag-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">Chart.js</span>
+                            <span class="project-tech-badge">AJAX</span>
+                        </div>
+                        <h3 class="project-title">ShopZone — E-Commerce Platform</h3>
+                        <p class="project-desc">Full-featured e-commerce platform with 127 products, 14 categories, 54 brands, shopping cart, wishlist, coupons, order tracking, COD and online payments, automatic stock tracking, and revenue analytics.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-box-fill" aria-hidden="true"></i> 127 Products</div>
+                            <div class="proj-stat"><i class="bi bi-tags-fill" aria-hidden="true"></i> 54 Brands</div>
+                            <div class="proj-stat"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> Analytics</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 4. Job Portal -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql chart" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-4">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="Job Portal on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="https://job-portal-production-1e04.up.railway.app" class="proj-link-btn" target="_blank" rel="noopener noreferrer" aria-label="Job Portal live demo (opens in new tab)">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-briefcase-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 9</span>
+                            <span class="project-tech-badge">Tailwind CSS</span>
+                            <span class="project-tech-badge">Chart.js</span>
+                            <span class="project-tech-badge live-badge">
+                                <i class="bi bi-broadcast-pin" aria-hidden="true"></i> Live
+                            </span>
+                        </div>
+                        <h3 class="project-title">Job Portal</h3>
+                        <p class="project-desc">Complete job listing portal with job posting, employer tools, search functionality, and analytics. Deployed live on Railway and publicly accessible.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-cloud-check-fill" aria-hidden="true"></i> Deployed Live</div>
+                            <div class="proj-stat"><i class="bi bi-search" aria-hidden="true"></i> Job Search</div>
+                            <div class="proj-stat"><i class="bi bi-graph-up" aria-hidden="true"></i> Charts</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 5. Admin Dashboard -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap ajax chart" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-5">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="Admin Dashboard on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="Admin Dashboard live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-speedometer2 project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">AJAX</span>
+                            <span class="project-tech-badge">Chart.js</span>
+                            <span class="project-tech-badge">Bootstrap 5</span>
+                        </div>
+                        <h3 class="project-title">Admin Dashboard</h3>
+                        <p class="project-desc">Role-based admin dashboard with AJAX CRUD operations, real-time analytics charts, Gmail SMTP email notifications, and full profile management system.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-shield-fill" aria-hidden="true"></i> Role-Based</div>
+                            <div class="proj-stat"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Gmail SMTP</div>
+                            <div class="proj-stat"><i class="bi bi-graph-up" aria-hidden="true"></i> Analytics</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 6. Hospital Management System -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap ajax react" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-6">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="Hospital Management System on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="Hospital Management System live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-hospital-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">React</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">REST API</span>
+                        </div>
+                        <h3 class="project-title">Hospital Management System</h3>
+                        <p class="project-desc">Full hospital management platform with patient registration, billing, prescriptions, medical reports, and patient history tracking — serving Admin, Doctor, and Receptionist roles.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-people-fill" aria-hidden="true"></i> 3 Roles</div>
+                            <div class="proj-stat"><i class="bi bi-file-medical-fill" aria-hidden="true"></i> Medical Records</div>
+                            <div class="proj-stat"><i class="bi bi-receipt-cutoff" aria-hidden="true"></i> Billing</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 7. Hostel Management System -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap ajax" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-7">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="Hostel Management System on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="Hostel Management System live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-building-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">AJAX</span>
+                            <span class="project-tech-badge">Bootstrap 5</span>
+                        </div>
+                        <h3 class="project-title">Hostel Management System</h3>
+                        <p class="project-desc">Complete hostel management system with room allocation, student management, fee tracking, complaint handling, AJAX CRUD, and reporting for Admin and Student roles.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-door-open-fill" aria-hidden="true"></i> Room Allocation</div>
+                            <div class="proj-stat"><i class="bi bi-cash-coin" aria-hidden="true"></i> Fee Tracking</div>
+                            <div class="proj-stat"><i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i> Reports</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 8. Library Management System -->
+            <div class="col-lg-6" data-filter-item data-tags="laravel php mysql bootstrap" data-reveal>
+                <article class="project-card">
+                    <div class="project-image proj-img-8">
+                        <div class="project-overlay">
+                            <div class="project-links-overlay">
+                                <a href="#" class="proj-link-btn" aria-label="Library Management System on GitHub">
+                                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="#" class="proj-link-btn" aria-label="Library Management System live demo">
+                                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-visual">
+                            <i class="bi bi-book-fill project-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tech-badge">Laravel 12</span>
+                            <span class="project-tech-badge">MySQL</span>
+                            <span class="project-tech-badge">Bootstrap 5</span>
+                        </div>
+                        <h3 class="project-title">Library Management System</h3>
+                        <p class="project-desc">Multi-role library management platform with 13 modules and 12 database tables, covering Admin, Librarian, and Student dashboards for complete book and member management.</p>
+                        <div class="project-stats">
+                            <div class="proj-stat"><i class="bi bi-grid-fill" aria-hidden="true"></i> 13 Modules</div>
+                            <div class="proj-stat"><i class="bi bi-table" aria-hidden="true"></i> 12 DB Tables</div>
+                            <div class="proj-stat"><i class="bi bi-people-fill" aria-hidden="true"></i> 3 Dashboards</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div><!-- /row -->
+    </div>
+</section>
+
+<!-- ================================================================
+     EXPERIENCE
+================================================================ -->
+<section class="section-padding bg-alt" id="experience" aria-label="Professional Experience">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">My professional background and work</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6" data-reveal>
+                <div class="exp-card">
+                    <div class="exp-icon" aria-hidden="true"><i class="bi bi-code-square"></i></div>
+                    <div class="exp-content">
+                        <h3 class="exp-title">Full Stack Web Development</h3>
+                        <p class="exp-period">2024 — Present</p>
+                        <p class="exp-desc">Independent development of full-stack web applications using PHP and Laravel — including management systems, e-commerce platforms, REST APIs, and dashboards from planning through to deployment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-reveal>
+                <div class="exp-card">
+                    <div class="exp-icon" aria-hidden="true"><i class="bi bi-database-fill"></i></div>
+                    <div class="exp-content">
+                        <h3 class="exp-title">Database Design &amp; Management</h3>
+                        <p class="exp-period">2025 — Present</p>
+                        <p class="exp-desc">Designing normalized relational databases with MySQL, implementing Eloquent ORM relationships, and building efficient query structures for real-world production applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-reveal>
+                <div class="exp-card">
+                    <div class="exp-icon" aria-hidden="true"><i class="bi bi-laptop-fill"></i></div>
+                    <div class="exp-content">
+                        <h3 class="exp-title">Freelance Development</h3>
+                        <p class="exp-period">2025 — Present</p>
+                        <p class="exp-desc">Offering professional web development services on Fiverr, Upwork, and Freelancer.com, building client projects with clean code, clear written communication, and timely delivery.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-reveal>
+                <div class="exp-card">
+                    <div class="exp-icon" aria-hidden="true"><i class="bi bi-diagram-3-fill"></i></div>
+                    <div class="exp-content">
+                        <h3 class="exp-title">REST API Development</h3>
+                        <p class="exp-period">2025 — Present</p>
+                        <p class="exp-desc">Building Laravel REST APIs with token authentication, resource controllers, and clean JSON response structures — including the Hospital Management System API backend with a React frontend.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     CERTIFICATIONS
+================================================================ -->
+<section class="section-padding" id="certifications" aria-label="Certifications">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Credentials and professional training</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="cert-card">
+                    <div class="cert-icon" aria-hidden="true"><i class="bi bi-filetype-js"></i></div>
+                    <p class="cert-issuer">Sololearn</p>
+                    <h3 class="cert-title">Introduction to JavaScript</h3>
+                    <div class="cert-date">
+                        <i class="bi bi-calendar3" aria-hidden="true"></i> June 2026
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="cert-card cert-featured">
+                    <div class="cert-icon" aria-hidden="true"><i class="bi bi-robot"></i></div>
+                    <p class="cert-issuer">MIT Software Solution, Hyderabad</p>
+                    <h3 class="cert-title">Python AI Engineer Internship</h3>
+                    <div class="cert-date">
+                        <i class="bi bi-calendar3" aria-hidden="true"></i> July — September 2026
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4" data-reveal>
+                <div class="cert-card">
+                    <div class="cert-icon" aria-hidden="true"><i class="bi bi-phone-fill"></i></div>
+                    <p class="cert-issuer">NAVTTC — MIT Software Solution, Hyderabad</p>
+                    <h3 class="cert-title">Mobile Application Development</h3>
+                    <div class="cert-date">
+                        <i class="bi bi-calendar3" aria-hidden="true"></i> 2025
+                        &nbsp;·&nbsp; <span class="cert-grade">Grade B</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     EDUCATION + LEARNING JOURNEY
+================================================================ -->
+<section class="section-padding bg-alt" id="education" aria-label="Education and Learning Journey">
+    <div class="container">
+
+        <!-- Education -->
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">My academic background</p>
+        </div>
+
+        <div class="edu-timeline">
+
+            <div class="edu-item" data-reveal>
+                <div class="edu-year">2022 – 2024</div>
+                <div class="edu-connector" aria-hidden="true">
+                    <div class="edu-dot"></div>
+                    <div class="edu-line"></div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></div>
+                    <div class="edu-details">
+                        <h3 class="edu-degree">Intermediate — Pre-Engineering</h3>
+                        <p class="edu-institution">Deaf Reach School and College, Rashidabad</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edu-item" data-reveal>
+                <div class="edu-year">2018 – 2022</div>
+                <div class="edu-connector" aria-hidden="true">
+                    <div class="edu-dot"></div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon" aria-hidden="true"><i class="bi bi-book-fill"></i></div>
+                    <div class="edu-details">
+                        <h3 class="edu-degree">Secondary Education (Matriculation)</h3>
+                        <p class="edu-institution">Deaf Reach School, Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Learning Journey -->
+        <div class="section-header mt-5 pt-3" data-reveal>
+            <h2 class="section-title">Learning Journey</h2>
+            <p class="section-subtitle">My self-taught development path</p>
+        </div>
+
+        <div class="learning-timeline" data-reveal>
+            <div class="timeline-track" aria-hidden="true"></div>
+            <div class="timeline-items">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="bi bi-filetype-php" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-tech">PHP</span>
+                        <span class="timeline-date">Oct 2024</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="bi bi-database-fill" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-tech">MySQL</span>
+                        <span class="timeline-date">Jan 2025</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-tech">AJAX</span>
+                        <span class="timeline-date">Feb 2025</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot timeline-dot-active">
+                        <i class="bi bi-box-fill" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-tech timeline-active-tech">Laravel</span>
+                        <span class="timeline-date">Apr 2025</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================================================================
+     CONTACT
+================================================================ -->
+<section class="section-padding" id="contact" aria-label="Contact">
+    <div class="container">
+        <div class="section-header" data-reveal>
+            <h2 class="section-title">Let's Build Something Together</h2>
+            <p class="section-subtitle">Have a project or opportunity? I'm available via email and written messages.</p>
+        </div>
+
+        <div class="row g-5">
+
+            <!-- Contact Info -->
+            <div class="col-lg-4" data-reveal>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon" aria-hidden="true"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <span class="contact-info-label">Email</span>
+                            <a href="mailto:Fayazahmedsaand93@gmail.com" class="contact-info-value">Fayazahmedsaand93@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon" aria-hidden="true"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <span class="contact-info-label">Phone</span>
+                            <span class="contact-info-value">03292073348</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <span class="contact-info-label">Location</span>
+                            <span class="contact-info-value">Hyderabad, Sindh, Pakistan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-socials mt-4">
+                    <a href="#" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Fiverr">
+                        <i class="bi bi-briefcase-fill" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                        <i class="bi bi-person-workspace" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Freelancer">
+                        <i class="bi bi-laptop-fill" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8" data-reveal>
+                <div class="contact-form-card">
+                    <p class="form-note mb-4" role="note">
+                        <i class="bi bi-info-circle-fill me-2" aria-hidden="true"></i>
+                        This form requires a backend email service (such as Formspree, Mailgun, or Laravel Mail) for actual message delivery. Contact me directly at the email above.
+                    </p>
+
+                    <div id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label-custom" for="contactName">Your Name</label>
+                                <input type="text" class="form-input-custom" id="contactName" placeholder="John Doe" autocomplete="name">
+                                <div class="field-error" id="nameError" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label-custom" for="contactEmail">Your Email</label>
+                                <input type="email" class="form-input-custom" id="contactEmail" placeholder="john@example.com" autocomplete="email">
+                                <div class="field-error" id="emailError" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom" for="contactSubject">Subject</label>
+                                <input type="text" class="form-input-custom" id="contactSubject" placeholder="Project inquiry / Job opportunity">
+                                <div class="field-error" id="subjectError" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label-custom" for="contactMessage">Message</label>
+                                <textarea class="form-input-custom" id="contactMessage" rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+                                <div class="field-error" id="messageError" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary-custom w-100" id="sendBtn" onclick="submitContactForm()">
+                                    <i class="bi bi-send-fill me-2" aria-hidden="true"></i>Send Message
+                                </button>
+                                <div id="formSuccess" class="form-success-msg d-none" role="status" aria-live="polite">
+                                    <i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>
+                                    Message validated! Connect a backend email service to enable actual delivery.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     FOOTER
+================================================================ -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="row align-items-center gy-3">
+
+            <div class="col-md-4">
+                <div class="footer-brand">
+                    <span class="logo-initials logo-sm" aria-hidden="true">FA</span>
+                    <div class="footer-brand-text">
+                        <strong>Fayaz Ahmed</strong>
+                        <small>Full Stack PHP &amp; Laravel Developer</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-socials">
+                    <a href="#" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+                    <a href="#" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Fiverr"><i class="bi bi-briefcase-fill" aria-hidden="true"></i></a>
+                    <a href="#" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Upwork"><i class="bi bi-person-workspace" aria-hidden="true"></i></a>
+                    <a href="#" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Freelancer"><i class="bi bi-laptop-fill" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="copyrightYear"></span> Fayaz Ahmed. Built with PHP &amp; Laravel expertise.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+</button>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* ============================================================
+   FAYAZ AHMED — PORTFOLIO JAVASCRIPT
+   Full Stack PHP & Laravel Developer
+   ============================================================ */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* ============================================================
+       1. DYNAMIC COPYRIGHT YEAR
+    ============================================================ */
+    var yearEl = document.getElementById('copyrightYear');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    /* ============================================================
+       2. THEME TOGGLE (Dark / Light)
+    ============================================================ */
+    var themeToggle = document.getElementById('themeToggle');
+    var themeIcon   = document.getElementById('themeIcon');
+    var htmlEl      = document.documentElement;
+
+    // Load saved theme or default to dark
+    var savedTheme = localStorage.getItem('fa-portfolio-theme') || 'dark';
+    htmlEl.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            var current = htmlEl.getAttribute('data-theme');
+            var next    = current === 'dark' ? 'light' : 'dark';
+            htmlEl.setAttribute('data-theme', next);
+            localStorage.setItem('fa-portfolio-theme', next);
+            updateThemeIcon(next);
+        });
+    }
+
+    function updateThemeIcon(theme) {
+        if (!themeIcon) return;
+        themeIcon.className = theme === 'dark'
+            ? 'bi bi-moon-stars-fill'
+            : 'bi bi-sun-fill';
+    }
+
+    /* ============================================================
+       3. NAVBAR — CLOSE MOBILE MENU ON LINK CLICK
+    ============================================================ */
+    var navLinks    = document.querySelectorAll('.navbar .nav-link');
+    var navCollapse = document.getElementById('navbarNav');
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (navCollapse && navCollapse.classList.contains('show')) {
+                var bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+                if (bsCollapse) bsCollapse.hide();
+            }
+        });
+    });
+
+    /* ============================================================
+       4. NAVBAR — SHADOW ON SCROLL
+    ============================================================ */
+    var mainNav = document.getElementById('mainNav');
+
+    function handleNavScroll() {
+        if (!mainNav) return;
+        if (window.pageYOffset > 50) {
+            mainNav.classList.add('scrolled');
+        } else {
+            mainNav.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+
+    /* ============================================================
+       5. ACTIVE NAV LINK ON SCROLL
+    ============================================================ */
+    var sections = document.querySelectorAll('section[id]');
+
+    function updateActiveNav() {
+        var scrollY = window.pageYOffset;
+
+        sections.forEach(function (section) {
+            var top    = section.offsetTop - 100;
+            var height = section.offsetHeight;
+            var id     = section.getAttribute('id');
+            var link   = document.querySelector('.navbar .nav-link[href="#' + id + '"]');
+
+            if (link) {
+                if (scrollY >= top && scrollY < top + height) {
+                    navLinks.forEach(function (l) { l.classList.remove('active'); });
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    /* ============================================================
+       6. BACK TO TOP BUTTON
+    ============================================================ */
+    var backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function () {
+        if (!backToTop) return;
+        if (window.pageYOffset > 400) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    if (backToTop) {
+        backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    /* ============================================================
+       7. TYPING ANIMATION
+    ============================================================ */
+    var typingEl = document.getElementById('typingText');
+
+    if (typingEl) {
+        var words       = ['PHP Developer', 'Laravel Developer', 'Full Stack Developer', 'Web App Developer'];
+        var wordIndex   = 0;
+        var charIndex   = 0;
+        var isDeleting  = false;
+        var typingPause = false;
+
+        function typeNext() {
+            if (typingPause) return;
+
+            var currentWord = words[wordIndex];
+            var displayText;
+
+            if (isDeleting) {
+                displayText = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                displayText = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            typingEl.textContent = displayText;
+
+            var delay = isDeleting ? 55 : 95;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                // Finished typing — pause then delete
+                delay      = 1800;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                // Finished deleting — move to next word
+                isDeleting = false;
+                wordIndex  = (wordIndex + 1) % words.length;
+                delay      = 380;
+            }
+
+            setTimeout(typeNext, delay);
+        }
+
+        // Small initial delay before starting
+        setTimeout(typeNext, 600);
+    }
+
+    /* ============================================================
+       8. SCROLL REVEAL (IntersectionObserver)
+    ============================================================ */
+    var revealEls = document.querySelectorAll('[data-reveal]');
+
+    if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    // Stagger cards that are siblings in the same row
+                    var el     = entry.target;
+                    var parent = el.parentElement;
+                    var delay  = 0;
+
+                    if (parent) {
+                        var siblings = Array.from(parent.querySelectorAll('[data-reveal]'));
+                        var idx = siblings.indexOf(el);
+                        delay = idx * 90;
+                    }
+
+                    setTimeout(function () {
+                        el.classList.add('revealed');
+                    }, delay);
+
+                    revealObserver.unobserve(el);
+                }
+            });
+        }, {
+            threshold:  0.08,
+            rootMargin: '0px 0px -36px 0px'
+        });
+
+        revealEls.forEach(function (el) {
+            revealObserver.observe(el);
+        });
+
+    } else {
+        // Fallback: show everything for browsers without IntersectionObserver
+        revealEls.forEach(function (el) {
+            el.classList.add('revealed');
+        });
+    }
+
+    /* ============================================================
+       9. PROJECT FILTERING
+    ============================================================ */
+    var filterBtns   = document.querySelectorAll('.filter-btn');
+    var projectItems = document.querySelectorAll('[data-filter-item]');
+
+    filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var filter = this.getAttribute('data-filter');
+
+            // Update active button
+            filterBtns.forEach(function (b) { b.classList.remove('active'); });
+            this.classList.add('active');
+
+            // Show or hide each project
+            projectItems.forEach(function (item) {
+                var tags = item.getAttribute('data-tags') || '';
+                if (filter === 'all' || tags.indexOf(filter) !== -1) {
+                    item.classList.remove('project-hidden');
+                } else {
+                    item.classList.add('project-hidden');
+                }
+            });
+        });
+    });
+
+    /* ============================================================
+       10. KEYBOARD ACCESSIBILITY — SKIP FOCUS STYLING
+          (Remove :focus-visible outline only on mouse clicks)
+    ============================================================ */
+    document.body.addEventListener('mousedown', function () {
+        document.body.classList.add('using-mouse');
+    });
+
+    document.body.addEventListener('keydown', function () {
+        document.body.classList.remove('using-mouse');
+    });
+
+});
+
+/* ============================================================
+   11. CONTACT FORM VALIDATION
+   (Global so onclick="submitContactForm()" works)
+============================================================ */
+function submitContactForm() {
+    var name    = document.getElementById('contactName');
+    var email   = document.getElementById('contactEmail');
+    var subject = document.getElementById('contactSubject');
+    var message = document.getElementById('contactMessage');
+
+    var nameErr    = document.getElementById('nameError');
+    var emailErr   = document.getElementById('emailError');
+    var subjectErr = document.getElementById('subjectError');
+    var messageErr = document.getElementById('messageError');
+    var successMsg = document.getElementById('formSuccess');
+
+    // Clear all errors and input-error class
+    var allErrors = [nameErr, emailErr, subjectErr, messageErr];
+    allErrors.forEach(function (el) {
+        if (el) el.textContent = '';
+    });
+
+    var allInputs = [name, email, subject, message];
+    allInputs.forEach(function (el) {
+        if (el) el.classList.remove('input-error');
+    });
+
+    if (successMsg) successMsg.classList.add('d-none');
+
+    var valid = true;
+
+    // Validate Name
+    if (!name || name.value.trim().length < 2) {
+        if (nameErr)  nameErr.textContent  = 'Please enter your name (at least 2 characters).';
+        if (name)     name.classList.add('input-error');
+        valid = false;
+    }
+
+    // Validate Email
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email.value.trim())) {
+        if (emailErr) emailErr.textContent = 'Please enter a valid email address.';
+        if (email)    email.classList.add('input-error');
+        valid = false;
+    }
+
+    // Validate Subject
+    if (!subject || subject.value.trim().length < 3) {
+        if (subjectErr) subjectErr.textContent = 'Please enter a subject.';
+        if (subject)    subject.classList.add('input-error');
+        valid = false;
+    }
+
+    // Validate Message
+    if (!message || message.value.trim().length < 10) {
+        if (messageErr) messageErr.textContent = 'Please write a message (at least 10 characters).';
+        if (message)    message.classList.add('input-error');
+        valid = false;
+    }
+
+    if (valid) {
+        // Show success message
+        if (successMsg) {
+            successMsg.classList.remove('d-none');
+        }
+        // Clear all fields
+        allInputs.forEach(function (el) {
+            if (el) el.value = '';
+        });
+
+        // Auto-hide success after 6 seconds
+        setTimeout(function () {
+            if (successMsg) successMsg.classList.add('d-none');
+        }, 6000);
+    } else {
+        // Scroll to first error
+        var firstError = document.querySelector('.input-error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstError.focus();
+        }
+    }
+}
+</script>
+</body>
+</html>
