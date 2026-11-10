@@ -632,6 +632,18 @@ h1, h2, h3, h4 {
     50%       { opacity: 0.1; transform: scale(1.09); }
 }
 
+/* Profile Photo */
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--accent);
+}
+
 .about-name {
     font-size: 1.1rem;
     font-weight: 700;
@@ -1829,7 +1841,7 @@ a.contact-info-value:hover { color: var(--accent); }
             <div class="col-lg-4" data-reveal>
                 <div class="about-card">
                     <div class="about-avatar">
-                        <div class="avatar-letters" aria-label="FA initials">FA</div>
+                        <img src="assets/images/profile.jpg" alt="Fayaz Ahmed — Full Stack PHP & Laravel Developer" class="profile-photo">
                         <div class="avatar-ring" aria-hidden="true"></div>
                     </div>
                     <h3 class="about-name mt-3">Fayaz Ahmed</h3>
